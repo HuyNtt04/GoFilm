@@ -18,7 +18,9 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    {
-        Paginator::useBootstrapFive();
-    }
+{
+    // Tuỳ chọn giao diện pagination theo layout
+    Paginator::defaultView('vendor.pagination.custom');
+    Paginator::defaultSimpleView('vendor.pagination.custom');
+}
 }

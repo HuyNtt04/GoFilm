@@ -12,6 +12,32 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
+<style>
+.pagination {
+    display: flex !important;
+    list-style: none !important;
+    margin: 20px 0 !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    gap: 5px !important;
+}
+
+.pagination li a,
+.pagination li span {
+    display: inline-block !important;
+    padding: 8px 12px !important;
+    text-decoration: none !important;
+    color: #333 !important;
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+}
+
+.pagination .active a {
+    background: #007bff !important;
+    color: # !important;
+}
+</style>
 
 <body class="bg-[#0e0f1a] text-white font-sans">
 
@@ -53,7 +79,7 @@
                         <a href="{{ route('SeriesMovies.index') }}" class="hover:text-yellow-400">Phim bộ</a>
                         <a href="{{ route('vip.movies') }}" class="hover:text-yellow-400">Phim VIP</a>
                         <!-- <a href="/gioithieu" class="hover:text-yellow-400">Giới thiệu</a> -->
-                        <a href="/lienhe" class="hover:text-yellow-400">Liên hệ</a>
+                        <!-- <a href="/lienhe" class="hover:text-yellow-400">Liên hệ</a> -->
                         <a href="{{ route('subscriptions.plans')}}"
                             class="hover:text-white text-yellow-400 text-lg font-bold">PREMIUM+</a>
                     </div>
@@ -68,7 +94,7 @@
                             <span class="text-sm font-semibold">
                                 <a href="{{ route('profile.index') }}">{{ auth()->user()->name }}</a>
                             </span>
-                            
+
                         </button>
                         <button
                             class="flex items-center px-4 py-2 bg-white text-black rounded-full hover:ring-1 hover:ring-white transition"
@@ -102,9 +128,8 @@
             <!-- Logo & Social -->
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div class="flex items-center gap-3">
-                    <img src="https://via.placeholder.com/40x40" alt="Logo" class="w-10 h-10 rounded-full" />
-                    <div class="text-xl font-bold">Ro<span class="text-yellow-400">Phim</span></div>
-                    <span class="text-white/60 text-sm">Phim hay cả rổ</span>
+                    <div class="text-xl font-bold">GO<span class="text-yellow-400">Film</span></div>
+                    <span class="text-white/60 text-sm">Phim hay</span>
                 </div>
                 <div class="flex gap-3 text-white/70">
                     <a href="#"><i class="fab fa-telegram-plane text-lg"></i></a>
