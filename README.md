@@ -136,6 +136,9 @@ php artisan serve
 <li><strong>Password</strong>: 12345678</li>
 </ul>
 
+<p><em>P/S: các link phim được phát trên website hoàn toàn là phim được kéo về và nhúng bằng drive nên nếu muốn thử chức năng thêm sửa xoá thì bạn hãy kiếm bất kỳ link video nào có thể nhúng được nhé.</em></p>
+
+
 <h2>🎯 Các lệnh hữu ích</h2>
 
 <pre><code># Xóa cache
@@ -144,9 +147,7 @@ php artisan config:clear
 php artisan route:clear
 php artisan view:clear
 
-<h2>🔧 Cấu hình bổ sung</h2>
-
 <h2>📄 License</h2>
 
-<p>Dự án này là 1 dự án phi lợi nhuận tao ra với mục đích học, trang web vẫn chỉ là 1 trang cơ bản đầy đủ các chức năng để tạo website</a>.</p>
+<p>Dự án này là 1 dự án phi lợi nhuận tao ra với mục đích học tập, trang web vẫn chỉ là 1 trang cơ bản đầy đủ các chức năng để tạo website</a>.</p>
 
