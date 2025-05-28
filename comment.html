@@ -1,0 +1,117 @@
+<section class="mt-10 mb-20 px-4">
+  <!-- Đường line mờ ngăn cách -->
+  <div class="border-t border-gray-700 opacity-30 mb-8"></div>
+
+  <!-- Container nhỏ gọn, căn trái -->
+  <div class="max-w-xl text-white">
+
+      <!-- Tiêu đề & Tabs -->
+      <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2 text-xl font-semibold">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2h-2m-4 0H7a2 2 0 01-2-2v-7a2 2 0 012-2h6m0-4v4m0 0l-2-2m2 2l2-2" />
+              </svg>
+              Bình luận <span class="text-yellow-400">(5)</span>
+          </div>
+          <div class="space-x-2 text-sm">
+              <button class="px-3 py-1 rounded border text-white bg-white/10 border-white/20">Bình luận</button>
+              <button class="px-3 py-1 rounded border text-white border-white/20 hover:bg-white/10 transition">Đánh giá</button>
+          </div>
+      </div>
+
+      <!-- Thông báo đăng nhập -->
+      <p class="text-sm text-gray-400 mb-4">Vui lòng <a href="#" class="text-yellow-400 hover:underline">đăng nhập</a> để tham gia bình luận.</p>
+
+      <!-- Form bình luận chính -->
+      <div class="bg-[#1c1c1c] rounded-xl p-4 mb-6">
+          <textarea class="w-full bg-transparent text-white resize-none placeholder-gray-500 border-none focus:ring-0"
+              placeholder="Viết bình luận" rows="4" maxlength="1000"></textarea>
+          <div class="flex justify-between items-center mt-2">
+              <label class="flex items-center gap-1 text-sm text-gray-400 cursor-pointer">
+                  <input type="checkbox" class="form-checkbox text-yellow-400" />
+                  Tiết lộ?
+              </label>
+              <div class="text-sm text-gray-500">0 / 1000</div>
+              <button class="flex items-center gap-1 text-yellow-400 font-semibold hover:text-yellow-300 transition">
+                  Gửi <span>&#x279E;</span>
+              </button>
+          </div>
+      </div>
+
+      <!-- Danh sách bình luận -->
+      <div class="space-y-6">
+
+          <!-- Bình luận 1 -->
+          <div class="flex gap-4 items-start">
+              <img src="https://i.pravatar.cc/40?img=32" class="w-10 h-10 rounded-full" />
+              <div class="flex-1">
+                  <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-2">
+                          <span class="font-semibold">hungg</span>
+                          <span class="text-yellow-400">∞</span>
+                          <span class="text-xs text-gray-400">4 ngày trước</span>
+                      </div>
+                      <span class="text-xs text-gray-500 bg-white/10 px-2 py-1 rounded">P.2 - Tập 1</span>
+                  </div>
+                  <p class="mt-1 text-gray-300">ra thêm cái giữ để tăng tốc đi ad :))</p>
+                  <div class="flex items-center text-sm mt-2 text-gray-500 gap-4">
+                      <button class="hover:underline reply-toggle-btn">👍</button>
+                      <button class="hover:underline reply-toggle-btn">Trả lời</button>
+                      <button class="hover:underline">... Thêm</button>
+                  </div>
+
+                  <!-- Form phản hồi nhỏ -->
+                  <div class="reply-form hidden mt-3">
+                      <textarea rows="2" placeholder="Phản hồi..." class="w-full bg-[#2a2a2a] text-sm text-white p-2 rounded resize-none"></textarea>
+                      <div class="flex justify-end mt-2">
+                          <button class="px-3 py-1 text-sm bg-yellow-500 text-black rounded hover:bg-yellow-400">Gửi phản hồi</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Bình luận 2 -->
+          <div class="flex gap-4 items-start">
+              <img src="https://i.pravatar.cc/40?img=18" class="w-10 h-10 rounded-full" />
+              <div class="flex-1">
+                  <div class="flex justify-between items-center">
+                      <div class="flex items-center gap-2">
+                          <span class="font-semibold">shylily</span>
+                          <span class="text-yellow-400">∞</span>
+                          <span class="text-xs text-gray-400">5 ngày trước</span>
+                      </div>
+                      <span class="text-xs text-gray-500 bg-white/10 px-2 py-1 rounded">P.2 - Tập 1</span>
+                  </div>
+                  <p class="mt-1 text-gray-300">[Bình luận ẩn]</p>
+                  <a href="#" class="text-yellow-400 text-sm hover:underline">Xem</a>
+                  <div class="flex items-center text-sm mt-2 text-gray-500 gap-4">
+                      <button class="hover:underline">👍</button>
+                      <button class="hover:underline reply-toggle-btn">Trả lời</button>
+                      <button class="hover:underline">... Thêm</button>
+                  </div>
+
+                  <!-- Form phản hồi nhỏ -->
+                  <div class="reply-form hidden mt-3">
+                      <textarea rows="2" placeholder="Phản hồi..." class="w-full bg-[#2a2a2a] text-sm text-white p-2 rounded resize-none"></textarea>
+                      <div class="flex justify-end mt-2">
+                          <button class="px-3 py-1 text-sm bg-yellow-500 text-black rounded hover:bg-yellow-400">Gửi phản hồi</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+  document.querySelectorAll('.reply-toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+          const replyForm = button.closest('.flex-1').querySelector('.reply-form');
+          replyForm.classList.toggle('hidden');
+      });
+  });
+</script>
+
+    
