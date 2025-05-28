@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/1291ed90-653d-420c-9d17-397a317731c7)h1>🎬 Laravel Movie Streaming Website</h1>
+<h1>🎬 Laravel Movie Streaming Website</h1>
 
 <p>Một website streaming phim trực tuyến được xây dựng bằng Laravel framework.</p>
 
