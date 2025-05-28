@@ -1,6 +1,6 @@
 <h1>🎬 Laravel Movie Streaming Website</h1>
 
-<p>Một website streaming phim trực tuyến được xây dựng bằng Laravel framework, cung cấp trải nghiệm xem phim mượt mà với giao diện thân thiện và các tính năng quản lý phong phú.</p>
+<p>Một website streaming phim trực tuyến được xây dựng bằng Laravel framework.</p>
 
 <h2>Tính năng chính</h2>
 
@@ -95,7 +95,7 @@ php artisan migrate
 php artisan db:seed
 </code></pre>
 
-<p>Hoặc chạy từng seeder cụ thể:</p>
+<p><em>P/S: Hoặc dùng sẵn file database được đính kèm và import thẳng lên MySQL.</em></p>
 
 <h3>8. Tạo storage link</h3>
 
