@@ -10,7 +10,7 @@
         <div id="slider" class="w-full h-full flex slider-container transition-all duration-500 ease-in-out">
 
             <!-- 🔹 Slide 1 -->
-            <div class="w-full h-full relative flex-shrink-0">
+            <!-- <div class="w-full h-full relative flex-shrink-0">
                 <img src="images/thumbnail2.jpg" class="absolute inset-0 w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
                 <div class="relative z-20 max-w-6xl mx-auto h-full flex flex-col justify-center px-6">
@@ -30,10 +30,10 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 🔹 Slide 2 -->
-            <div class="w-full h-full relative flex-shrink-0">
+            <!-- <div class="w-full h-full relative flex-shrink-0">
                 <img src="images/thumbnail3.jpg" class="absolute inset-0 w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
                 <div class="relative z-20 max-w-6xl mx-auto h-full flex flex-col justify-center px-6">
@@ -52,7 +52,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 🔹 Slide 1 + 2 -->
             @foreach ($twoLastestMovies as $lastestMovie)
@@ -70,10 +70,11 @@
                         {{ $lastestMovie->description }}...
                     </p>
                     <div class="flex gap-4">
-                        <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold">
-                            <i class="fas fa-play mr-2"></i> <a
-                                href="{{ route('MovieInfo.show', $lastestMovie->id) }}">Xem ngay</a>
-                        </button>
+                        <a href="{{ route('MovieInfo.show', $lastestMovie->id) }}"
+                            class="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold inline-flex items-center">
+                            <i class="fas fa-play mr-2"></i> Xem ngay
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -93,11 +94,11 @@
 
 <!-- 🔘 Thumbnails old -->
 <div class="absolute bottom-6 right-6 z-30 flex space-x-3">
-    <img onclick="goToSlide(0)" src="images/thumbnail2.jpg"
+    <!-- <img onclick="goToSlide(0)" src="images/thumbnail2.jpg"
         class="thumb w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition" />
     <img onclick="goToSlide(1)" src="images/thumbnail3.jpg"
-        class="thumb w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition" />
-    <?php $i = 2; ?>
+        class="thumb w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition" /> -->
+    <?php $i = 0; ?>
     @foreach ($twoLastestMovies as $lastestMovie)
     <img onclick="goToSlide( {{ $i }} )" src="{{ asset($lastestMovie->thumbnail) }}"
         class="thumb w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition" />
@@ -451,10 +452,10 @@
                             <p class="text-sm text-white/60 italic"> <a
                                     href="{{ route('MovieInfo.show', $movieByTop10->id) }}">
                                     {{ $movieByTop10->title }} </a></p>
-                            <div class="text-xs mt-1 text-white/80">Phần 1 • Tập 12</div>
+                            <div class="text-xs mt-1 text-white/80"></div>
                             <div class="mt-1 flex gap-2 text-xs">
-                                <span class="bg-gray-700 px-2 py-0.5 rounded">PĐ. 12</span>
-                                <span class="bg-green-600 px-2 py-0.5 rounded">TM. 12</span>
+                                <span class="bg-gray-700 px-2 py-0.5 rounded"></span>
+                                <span class="bg-green-600 px-2 py-0.5 rounded"></span>
                             </div>
                         </div>
                     </div>
@@ -680,6 +681,7 @@ function closeStatsModal() {
 
 const slider = document.getElementById('slider');
 const slides = slider.querySelectorAll('div.flex-shrink-0');
+const thumbnails = document.querySelectorAll('.thumbnail'); // Giả sử bạn có class "thumbnail" cho các nút điều hướng
 const totalSlides = slides.length;
 
 function goToSlide(index) {
@@ -688,7 +690,14 @@ function goToSlide(index) {
     slider.style.transform = `translateX(-${offset}px)`;
 }
 
+// Gán click cho thumbnail chứ KHÔNG gán cho slide
+thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener('click', () => {
+        goToSlide(index);
+    });
+});
 
+// Khởi động với slide đầu tiên
 goToSlide(0);
 </script>
 @endpush

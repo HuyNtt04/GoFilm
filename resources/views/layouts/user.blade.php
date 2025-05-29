@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
+<style>
+.active-thumb {
+    border: 2px solid white;
+    border-radius: 0.25rem;
+}
+</style>
 
 <body class="bg-[#0e0f1a] text-white font-sans">
 
@@ -51,8 +57,6 @@
                         <a href="{{ route('MovieCategories.index') }}" class="hover:text-yellow-400">Chủ đề</a>
                         <a href="{{ route('SingleMovies.index') }}" class="hover:text-yellow-400">Phim lẻ</a>
                         <a href="{{ route('SeriesMovies.index') }}" class="hover:text-yellow-400">Phim bộ</a>
-                        <a href="/gioithieu" class="hover:text-yellow-400">Giới thiệu</a>
-                        <a href="/lienhe" class="hover:text-yellow-400">Liên hệ</a>
                         <a href="{{ route('subscriptions.plans')}}"
                             class="hover:text-white text-yellow-400 text-lg font-bold">PREMIUM+</a>
                     </div>
@@ -68,7 +72,7 @@
                                 <a href="{{ route('profile.index') }}">{{ auth()->user()->name }}</a>
                             </span>
                         </button>
-                        
+
                         </span>
                         @else
                         <button
@@ -93,7 +97,7 @@
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div class="flex items-center gap-3">
                     <img src="https://via.placeholder.com/40x40" alt="Logo" class="w-10 h-10 rounded-full" />
-                    <div class="text-xl font-bold">Ro<span class="text-yellow-400">Phim</span></div>
+                    <div class="text-xl font-bold">GO<span class="text-yellow-400">Film</span></div>
                     <span class="text-white/60 text-sm">Phim hay cả rổ</span>
                 </div>
                 <div class="flex gap-3 text-white/70">
@@ -111,8 +115,8 @@
                 <a href="#" class="hover:text-white transition">Hỏi-Đáp</a>
                 <a href="#" class="hover:text-white transition">Chính sách bảo mật</a>
                 <a href="#" class="hover:text-white transition">Điều khoản sử dụng</a>
-                <a href="#" class="hover:text-white transition">Giới thiệu</a>
-                <a href="#" class="hover:text-white transition">Liên hệ</a>
+                <a href="/gioithieu" class="hover:text-yellow-400">Giới thiệu</a>
+                <a href="/lienhe" class="hover:text-yellow-400">Liên hệ</a>
             </div>
 
             <!-- Danh mục -->
@@ -125,7 +129,7 @@
 
             <!-- Mô tả -->
             <div class="text-white/60 leading-relaxed text-[15px]">
-                RoPhim – Phim hay cả rổ – Trang xem phim online chất lượng cao miễn phí Vietsub, thuyết minh, lồng tiếng
+                GoFilm – Phim hay cả rổ – Trang xem phim online chất lượng cao miễn phí Vietsub, thuyết minh, lồng tiếng
                 full
                 HD.
                 Kho phim mới khổng lồ, phim chiếu rạp, phim bộ, phim lẻ từ nhiều quốc gia như Việt Nam, Hàn Quốc, Trung

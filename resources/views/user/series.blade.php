@@ -39,7 +39,7 @@
 
     <div class="mt-5">
         {{
-                $movies->links();
+                $movies->links()
             }}
     </div>
 </main>

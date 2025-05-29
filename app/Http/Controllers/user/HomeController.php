@@ -13,7 +13,7 @@ class HomeController extends Controller
         $twoLastestMovies = Movie::query()
         ->select('id', 'title', 'thumbnail', 'image', 'description', 'is_series')
         ->orderBy('updated_at', 'desc')
-        ->limit(2)
+        ->limit(4)
         ->get(); 
 
 //-------------------
