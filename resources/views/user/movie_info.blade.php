@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="bg-white/5 rounded-xl p-6 md:flex gap-6 mb-10 shadow-inner">
         <!-- Poster -->
         <div class="md:w-1/4 flex-shrink-0">
+            <h2></h2>
             <img src="{{ asset($movie->thumbnail) }}" alt="Poster" class="rounded-lg w-full" />
             <h2 class="text-xl font-bold mt-4">{{ $movie->title }}</h2>
             <p class="text-sm text-yellow-400">{{ $movie->title }}</p>
@@ -51,9 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <!-- Player + Controls -->
         <div class="md:w-3/4 mt-6 md:mt-0">
-            <iframe class="w-full aspect-video rounded-lg shadow"
-                src="https://www.youtube.com/embed/{{ $movie->trailer_youtube_id ?? 'NPoHPNeU9fc' }}"
-                title="YouTube video player" frameborder="0"
+            @if($movie->trailer_url)
+            <iframe class="w-full aspect-video rounded-lg shadow" src="{{ $movie->trailer_url }}" title="Trailer"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             <div class="flex gap-4 mt-4 flex-wrap">
@@ -97,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <button class="bg-white/10 text-white px-4 py-2 rounded-full hover:bg-white/20"><i
                         class="fas fa-share-alt mr-2"></i>Chia sẻ</button>
             </div>
+            @endif
         </div>
     </div>
 
@@ -131,8 +133,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 @else
                 <p class="text-gray-400">Chưa có tập phim nào.</p>
                 @endif
-                @endif
             </div>
+            @endif
         </div>
 
         <!-- Tab Diễn viên -->
@@ -311,6 +313,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </main>
 @endsection
+
 @push('js')
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -325,13 +328,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 @endpush
+
 <style>
 .alert {
     background-color: #f8d7da;
     color: #721c24;
     padding: 10px;
     border-radius: 5px;
-
 }
 
 .alert a {

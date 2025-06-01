@@ -35,7 +35,8 @@ class MovieRequest extends FormRequest
             'film_duration' => 'required|numeric',
             'image' => 'required|array',
             'is_series' => 'required|in:0,1',
-            'images.*'=>'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'images.*'=>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'trailer_url' => 'nullable|url|string|max:500'
         ];
     }
 }

@@ -22,6 +22,7 @@ class Movie extends Model
         'film_duration',
         'isDeleted',
         'image',
+        'trailer_url'
     ];
     protected $primaryKey = 'id';
     public function categories(){
