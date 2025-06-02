@@ -132,7 +132,7 @@ php artisan serve
 <li><strong>Password</strong>: 12345678</li>
 </ul>
 
-<p><em>P/S: các link phim được phát trên website hoàn toàn là phim được kéo về và nhúng bằng drive nên nếu muốn thử chức năng thêm sửa xoá thì bạn hãy kiếm bất kỳ link video nào có thể nhúng được nhé.</em></p>
+<p><em>P/S: các link phim được phát trên website hoàn toàn là phim được kéo về và nhúng bằng drive nên nếu muốn thử chức năng thêm sửa xoá và hiển thị phim thì bạn hãy kiếm bất kỳ link video nào có thể nhúng được nhé.</em></p>
 
 
 <h2>🎯 Các lệnh hữu ích</h2>
