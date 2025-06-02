@@ -142,6 +142,8 @@ php artisan cache:clear
 php artisan config:clear
 php artisan route:clear
 php artisan view:clear
+hoặc
+php artisan optimize:clear
 
 <h2>📄 License</h2>
 
