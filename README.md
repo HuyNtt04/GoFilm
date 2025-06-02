@@ -89,13 +89,9 @@ THUMBNAIL_STORAGE_PATH=public/thumbnails
 php artisan migrate
 </code></pre>
 
-<h3>7. Seed dữ liệu mẫu</h3>
+<h3>7. Import database kèm theo</h3>
 
-<pre><code># Chạy seeder để tạo dữ liệu mẫu
-php artisan db:seed
-</code></pre>
-
-<p><em>P/S: Hoặc dùng sẵn file database được đính kèm và import thẳng lên MySQL.</em></p>
+<p>Sử dụng file databse Gofilm và import database lên MySQL.</p>
 
 <h3>8. Tạo storage link</h3>
 
@@ -149,4 +145,4 @@ php artisan view:clear
 
 <h2>📄 License</h2>
 
-<p>Dự án này là 1 dự án phi lợi nhuận tao ra với mục đích học tập, trang web vẫn chỉ là 1 trang cơ bản đầy đủ các chức năng để tạo website</a>.</p>
+<p>Dự án này là 1 dự án phi lợi nhuận tao ra với mục đích học tập, trang web vẫn chỉ là 1 trang cơ bản đầy đủ các chức năng để tạo website và vẫn được update thường xuyên</a>.</p>
