@@ -41,13 +41,9 @@ php artisan key:generate
 
 <h3>4. Cấu hình file .env</h3>
 
-<p>Mở file <code>.env</code> và cập nhật các thông tin sau:</p>
+<p>Mở file <code>.env</code> và cập nhật như này là được:</p>
 
-<pre><code>APP_NAME="Movie Streaming"
-APP_ENV=local
-APP_KEY=base64:your-generated-key
-APP_DEBUG=true
-APP_URL=http://localhost:8000/
+<pre><code>
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -55,28 +51,6 @@ DB_PORT=3306
 DB_DATABASE=projectf
 DB_USERNAME=root
 DB_PASSWORD=
-
-BROADCAST_DRIVER=log
-CACHE_DRIVER=file
-FILESYSTEM_DISK=local
-QUEUE_CONNECTION=sync
-SESSION_DRIVER=file
-SESSION_LIFETIME=120
-
-Mail configuration (optional),
-MAIL_MAILER=smtp
-MAIL_HOST=mailhog
-MAIL_PORT=1025
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
-MAIL_FROM_ADDRESS="hello@example.com"
-MAIL_FROM_NAME="${APP_NAME}"
-
-File upload settings,
-UPLOAD_MAX_SIZE=100000
-VIDEO_STORAGE_PATH=public/videos
-THUMBNAIL_STORAGE_PATH=public/thumbnails
 </code></pre>
 
 <h3>5. Tạo database</h3>
